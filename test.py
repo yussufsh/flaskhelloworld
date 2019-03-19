@@ -20,9 +20,9 @@ class TestHello(unittest.TestCase):
 
     def test_hello_name(self):
         name = 'User'
-        rv = self.app.get(f'/hello/{name}')
+        rv = self.app.get('/hello/{0}'.format(name))
         self.assertEqual(rv.status, '200 OK')
-        self.assertIn(bytearray(f"{name}", 'utf-8'), rv.data)
+        self.assertIn(bytearray("{0}".format(name), 'utf-8'), rv.data)
 
 if __name__ == '__main__':
     unittest.main()
