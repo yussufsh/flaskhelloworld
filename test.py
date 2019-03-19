@@ -22,7 +22,6 @@ class TestHello(unittest.TestCase):
         name = 'User'
         rv = self.app.get('/hello/{0}'.format(name))
         self.assertEqual(rv.status, '200 OK')
-        print(rv.data)
         self.assertIn(name, rv.data)
 
 if __name__ == '__main__':
