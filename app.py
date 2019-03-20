@@ -10,7 +10,7 @@ def hello_world():
 
 @app.route('/hello/<username>')
 def hello_user(username):
-    return 'Why Hello %s!\n' % username
+    return 'Hello %s\n' % username
 
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))
