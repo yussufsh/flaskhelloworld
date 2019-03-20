@@ -22,7 +22,7 @@ class TestHello(unittest.TestCase):
         name = 'User'
         rv = self.app.get('/hello/{0}'.format(name))
         self.assertEqual(rv.status, '200 OK')
-        self.assertIn(bytearray(name, 'utf-8'), rv.data)
+        self.assertEqual("Hello User", rv.data)
 
 if __name__ == '__main__':
     unittest.main()
