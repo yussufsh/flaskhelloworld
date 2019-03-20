@@ -23,7 +23,7 @@ pipeline {
                 }
             }
         }
-        stage('Publish') {
+        stage('Publish Manifest') {
             agent {
                 label 'jenkins-slave-ppc64le'
             }
